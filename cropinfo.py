@@ -32,17 +32,20 @@ def get_connection():
     try:
         conn = pyodbc.connect(
             f"DRIVER={{ODBC Driver 18 for SQL Server}};"
-    f"SERVER={st.secrets['DB_SERVER']};"
-    f"DATABASE={st.secrets['DB_NAME']};"
-    f"UID={st.secrets['DB_USER']};"
-    f"PWD={st.secrets['DB_PASSWORD']};"
-    "TrustServerCertificate=yes;"
-    "Connection Timeout=30;")
+            f"SERVER={st.secrets['DB_SERVER']};"
+            f"DATABASE={st.secrets['DB_NAME']};"
+            f"UID={st.secrets['DB_USER']};"
+            f"PWD={st.secrets['DB_PASSWORD']};"
+            "TrustServerCertificate=yes;"
+            "Encrypt=yes;"  # 🔐 Required on Streamlit Cloud
+            "Connection Timeout=30;"
+        )
         return conn
     except Exception as e:
         st.error("❌ ڈیٹا بیس کنکشن میں مسئلہ ہے۔")
         st.exception(e)
         st.stop()
+
 
 # --- Load crop info view ---
 @st.cache_data
