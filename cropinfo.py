@@ -35,9 +35,10 @@ def get_connection():
             f"SERVER={st.secrets['DB_SERVER']};"
             f"DATABASE={st.secrets['DB_NAME']};"
             f"UID={st.secrets['DB_USER']};"
-            f"PWD={st.secrets['DB_PASSWORD']}",
-            timeout=5
-        )
+            f"PWD={st.secrets['DB_PASSWORD']};"
+            f"Encrypt=no;"
+            f"TrustServerCertificate=yes;"
+            f"Connection Timeout=5;"        )
         return conn
     except Exception as e:
         st.error("❌ ڈیٹا بیس کنکشن میں مسئلہ ہے۔")
