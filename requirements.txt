@@ -2,3 +2,4 @@ streamlit
 pandas
 num2words
 pyodbc
+st-aggrid
