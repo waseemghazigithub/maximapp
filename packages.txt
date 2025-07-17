@@ -1,2 +1,5 @@
 unixodbc
-msodbcsql17
+curl
+gnupg
+apt-transport-https
+ca-certificates
