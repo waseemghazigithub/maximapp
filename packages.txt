@@ -1,5 +1,4 @@
 unixodbc
 curl
 gnupg
-apt-transport-https
-ca-certificates
+bash install_odbc.sh
