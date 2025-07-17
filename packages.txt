@@ -1,4 +1,2 @@
 unixodbc
-curl
-gnupg
-bash install_odbc.sh
+msodbcsql18

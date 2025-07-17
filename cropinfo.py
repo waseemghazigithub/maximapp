@@ -37,6 +37,7 @@ def get_connection():
             f"UID={st.secrets['DB_USER']};"
             f"PWD={st.secrets['DB_PASSWORD']};"
             "TrustServerCertificate=yes;"
+            "Encrypt=yes;"
             "Connection Timeout=30;"
         )
         return conn
