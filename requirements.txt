@@ -1,5 +1,5 @@
 streamlit
+pyodbc
 pandas
 num2words
-pyodbc
 streamlit-aggrid
