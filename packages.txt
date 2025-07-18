@@ -1,2 +1,2 @@
 unixodbc
-msodbcsql13
+unixodbc-dev
